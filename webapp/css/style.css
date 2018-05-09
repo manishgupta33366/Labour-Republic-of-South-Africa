@@ -1,0 +1,36 @@
+.sapMIBar-CTX .sapMTitle.dashboardPageTitleColor {
+    color: rgb(73, 42, 137);
+}
+
+.dashboardPageHeaderBackground {
+    background: white !important;
+}
+
+.headerLabourClass {
+    text-align: left !important;
+    font-size: xx-large !important;
+    color: #197a1c !important;
+    border-bottom: 3px solid gray !important;
+}
+
+.redNotes {
+    color: red !important;
+    font-weight: bold !important;
+    font-size: small !important;
+}
+
+.redNoteNB {
+    color: red !important;
+    font-weight: bold !important;
+    font-size: small !important;
+    margin-bottom: 10px !important;
+}
+
+.blackHeadings {
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 20px !important;;
+}
+.pannels{
+	    margin-bottom: -20px !important;
+}

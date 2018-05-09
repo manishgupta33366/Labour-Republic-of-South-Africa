@@ -1,0 +1,1219 @@
+<mvc:View controllerName="com.employerreportaccident.controller.EmployerReportAccident" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+	xmlns:uxap="sap.uxap">
+	<Page>
+		<customHeader>
+			<Toolbar design="Transparent" class="dashboardPageHeaderBackground">
+				<content>
+					<Title class="dashboardPageTitleColor sapUiTinyMarginTop sapUiTinyMarginBegin" text="{i18n>appTitle}"/>
+					<ToolbarSpacer/>
+				</content>
+			</Toolbar>
+		</customHeader>
+		<content>
+			<uxap:ObjectPageLayout id="ObjectPageLayoutOne" enableLazyLoading="true" showTitleInHeaderContent="true" showEditHeaderButton="false"
+				editHeaderButtonPress="handleEditBtnPress">
+				<uxap:headerTitle>
+					<uxap:ObjectPageHeader objectImageURI="./img/labour_Logo.png" objectTitle="Labour Republic of South Africa" objectImageShape="Circle"
+						objectImageAlt="Labour Logo" objectSubtitle=" " isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false"
+						isObjectSubtitleAlwaysVisible="false"></uxap:ObjectPageHeader>
+				</uxap:headerTitle>
+				<uxap:headerContent>
+					<l:VerticalLayout>
+						<Text text="Department: Labour"/>
+					</l:VerticalLayout>
+				</uxap:headerContent>
+				<uxap:sections titleUppercase="false">
+					<uxap:ObjectPageSection id="EmployerOPS" title="Employer" importance="Medium" titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="EmployerOPSSS" title=" ">
+								<uxap:blocks>
+									<Panel expandable="false" expanded="false" width="auto" class="sapUiResponsiveMargin pannels">
+										<content>
+											<f:Form editable="true">
+												<!--							<f:toolbar>
+								<Toolbar id="TB1">
+									<Title text="Address" level="H4" titleStyle="H4"/>
+									<ToolbarSpacer/>
+								</Toolbar>
+							</f:toolbar>-->
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="12" labelSpanM="12" emptySpanL="4" emptySpanM="4" columnsL="3" columnsM="3"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>1}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/1}" required="false" enabled="true" placeholder="{i18n>1placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>2}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/2}" required="false" enabled="true" placeholder="{i18n>2}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>3}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/3}" required="false" enabled="true" placeholder="{i18n>3placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="12" labelSpanM="12" emptySpanL="4" emptySpanM="4" columnsL="3" columnsM="3"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>4}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/4}" required="false" enabled="true" placeholder="{i18n>4}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>5}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/5}" required="false" enabled="true" placeholder="Street address postal code...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>6}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/6}" required="false" enabled="true" placeholder="{i18n>6}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>7}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/7}" required="false" enabled="true" placeholder="{i18n>7}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>8}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/8}" required="false" enabled="true" placeholder="{i18n>8placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>9.1}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/9.1}" required="false" enabled="true" placeholder="{i18n>9.1placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>9.2}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/9.2}" required="false" enabled="true" placeholder="{i18n>9.2placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="12" labelSpanM="12" emptySpanL="4" emptySpanM="4" columnsL="2" columnsM="2"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>10}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/10}" required="false" enabled="true" placeholder="{i18n>10placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>11}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/11}" required="false" enabled="true" placeholder="{i18n>11placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+										</content>
+									</Panel>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="EmployeeOPS" title="Employee" importance="Medium" titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="EmployeeOPSSS" title=" ">
+								<uxap:blocks>
+									<Panel expandable="false" expanded="false" headerText="" width="auto" class="sapUiResponsiveMargin">
+										<content>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="2" labelSpanM="2" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>12}">
+																<f:fields>
+																	<RadioButtonGroup columns="5">
+																		<layoutData>
+																			<l:GridData span="L9 M9 S9"/>
+																		</layoutData>
+																		<buttons>
+																			<RadioButton id="RB1-1" text="working director"/>
+																			<RadioButton id="RB1-2" text="working member of a CC"/>
+																			<RadioButton id="RB1-3" text="owner of"/>
+																			<RadioButton id="RB1-4" text="partner in the business?"/>
+																			<RadioButton id="RB1-5" text="Not applicable"/>
+																		</buttons>
+																	</RadioButtonGroup>
+																	<!--<SegmentedButton selectedKey="workingDir">-->
+																	<!--	<items>-->
+																	<!--		<SegmentedButtonItem text="working director" key="SBworkingDir"/>-->
+																	<!--		<SegmentedButtonItem text="working member of a CC" key="SBworkingmem"/>-->
+																	<!--		<SegmentedButtonItem text="owner of" key="SBownerOf"/>-->
+																	<!--		<SegmentedButtonItem text="partner in the business?" key="SBpartnerBusiness"/>-->
+																	<!--		<SegmentedButtonItem text="Not applicable" key="SBnotApplicable"/>-->
+																	<!--	</items>-->
+																	<!--												<layoutData>-->
+																	<!--		<l:GridData span="L9 M9 S9"/>-->
+																	<!--	</layoutData>-->
+																	<!--</SegmentedButton>-->
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="12" labelSpanM="12" emptySpanL="4" emptySpanM="4" columnsL="3" columnsM="3" columnsXL="4"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>13}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/13}" required="false" enabled="true" placeholder="{i18n>13}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>14}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/14}" required="false" enabled="true" placeholder="{i18n>14}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>16}">
+																<f:fields>
+																	<DatePicker change="handleDateChange" placeholder="{i18n>16}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</DatePicker>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>17}">
+																<f:fields>
+																	<SegmentedButton width="100%">
+																		<items>
+																			<SegmentedButtonItem text="Male" key="SegmentButtonMale" width="50%"/>
+																			<SegmentedButtonItem text="Female" key="satisfiedSegmentButtonFeMale" width="50%"/>
+																		</items>
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</SegmentedButton>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>18}">
+																<f:fields>
+																	<SegmentedButton width="100%">
+																		<items>
+																			<SegmentedButtonItem text="Married" key="SegmentButtonMarried" width="50%"/>
+																			<SegmentedButtonItem text="Single" key="satisfiedSegmentButtonSingle" width="50%"/>
+																		</items>
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</SegmentedButton>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>19}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/19}" required="false" enabled="true" placeholder="{i18n>19}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>22}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/22}" required="false" enabled="true" placeholder="{i18n>22}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>23}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/23}" required="false" enabled="true" placeholder="{i18n>23placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>20}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/20}" required="false" enabled="true" placeholder="{i18n>20placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>24}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/24}" required="false" enabled="true" placeholder="{i18n>24}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>25}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/25}" required="false" enabled="true" placeholder="{i18n>25}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>26}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/26}" required="false" enabled="true" placeholder="{i18n>26placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>15}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/idNumber}" required="false" enabled="true" placeholder="{i18n>15placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>21}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/21}" required="false" enabled="true" placeholder="{i18n>21placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>27}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/periodInEmploy}" required="false" enabled="true" placeholder="{i18n>27placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>28}">
+																<f:fields>
+																	<SegmentedButton width="100%">
+																		<items>
+																			<SegmentedButtonItem text="0-13 days" key="SegmentButton0-13Days" width="50%"/>
+																			<SegmentedButtonItem text="14 and more" key="satisfiedSegmentButton14OrMore" width="50%"/>
+																		</items>
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</SegmentedButton>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+										</content>
+									</Panel>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<!--Employer Panel End-->
+					<!--Employee Panel start-->
+					<!--Employee Panel start-->
+					<uxap:ObjectPageSection id="AccidentOPS" title="Accident" importance="Medium" titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="AccidentOPSSS" title=" ">
+								<uxap:blocks>
+									<Panel expandable="false" expanded="false" width="auto" class="sapUiResponsiveMargin">
+										<content>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="12" labelSpanM="12" emptySpanL="4" emptySpanM="4" columnsL="2" columnsM="2"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>29}">
+																<f:fields>
+																	<DateTimePicker id="accidentDateTimePicker" valueFormat="yyyy-MM-dd-HH-mm-ss" displayFormat="long" change="handleChange"
+																		placeholder="{i18n>enterDateTime}">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</DateTimePicker>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>31}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/31}" required="false" enabled="true" placeholder="{i18n>31placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L6 M6 S12"/>
+																		</layoutData>
+																	</Input>
+																	<Input value="{employerReportAccidentModel>/32}" required="false" enabled="true" placeholder="{i18n>32placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L6 M6 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>33}">
+																<f:fields>
+																	<DateTimePicker id="accidentReportedDateTimePicker" valueFormat="yyyy-MM-dd-HH-mm-ss" displayFormat="long" change="handleChange"
+																		placeholder="{i18n>enterDateTime}">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</DateTimePicker>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>35}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/35}" required="false" enabled="true" placeholder="{i18n>35placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>36}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/36}" required="false" enabled="true" placeholder="{i18n>36placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>37}">
+																<f:fields>
+																	<SegmentedButton width="100%">
+																		<items>
+																			<SegmentedButtonItem text="Yes" key="accidentWithTradeSegmentButtonYes" width="50%"/>
+																			<SegmentedButtonItem text="No" key="accidentWithTradeSegmentButtonNo" width="50%"/>
+																		</items>
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</SegmentedButton>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>38}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/howAccidentOccurred}" required="false" enabled="true" placeholder="{i18n>38placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+											<Text text="{i18n>note1}" class="redNotes"/>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="12" labelSpanM="12" emptySpanL="4" emptySpanM="4" columnsL="2" columnsM="2"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement>
+																<f:fields>
+																	<Table id="ATableField38" items="{path: '/38A'}" mode="SingleSelectMaster">
+																		<layoutData>
+																			<l:GridData span="L6 M6 S12"/>
+																		</layoutData>
+																		<columns>
+																			<Column demandPopin="true" hAlign="Center">
+																				<Text text="{i18n>38.1}"/>
+																				<layoutData>
+																					<l:GridData span="L6 M6 S12"/>
+																				</layoutData>
+																			</Column>
+																			<Column demandPopin="true" hAlign="Center">
+																				<Text text="Check"/>
+																			</Column>
+																		</columns>
+																		<items>
+																			<ColumnListItem>
+																				<cells>
+																					<FlexBox alignItems="Center" justifyContent="Center">
+																						<items>
+																							<Text text="{Text}"/>
+																						</items>
+																					</FlexBox>
+																					<FlexBox alignItems="Center" justifyContent="Center">
+																						<items>
+																							<CheckBox selected="false"/>
+																						</items>
+																					</FlexBox>
+																				</cells>
+																			</ColumnListItem>
+																		</items>
+																	</Table>
+																	<Table id="BTableField38" inset="false" items="{path: '/38B'}">
+																		<layoutData>
+																			<l:GridData span="L6 M6 S12"/>
+																		</layoutData>
+																		<columns>
+																			<Column demandPopin="true" hAlign="Center">
+																				<Text text="{i18n>38.1}"/>
+																				<layoutData>
+																					<l:GridData span="L6 M6 S12"/>
+																				</layoutData>
+																			</Column>
+																			<Column demandPopin="true" hAlign="Center">
+																				<Text text="Check"/>
+																			</Column>
+																		</columns>
+																		<items>
+																			<ColumnListItem>
+																				<cells>
+																					<FlexBox alignItems="Center" justifyContent="Center">
+																						<items>
+																							<Text text="{Text}"/>
+																						</items>
+																					</FlexBox>
+																					<FlexBox alignItems="Center" justifyContent="Center">
+																						<items>
+																							<CheckBox selected="false"/>
+																						</items>
+																					</FlexBox>
+																				</cells>
+																			</ColumnListItem>
+																		</items>
+																	</Table>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="12" labelSpanM="12" emptySpanL="4" emptySpanM="4" columnsL="3" columnsM="3"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>38.3}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/38.3}" required="false" enabled="true">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>40}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/40}" required="false" enabled="true" placeholder="Nature of injury...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>40.1}">
+																<f:fields>
+																	<SegmentedButton width="100%">
+																		<items>
+																			<SegmentedButtonItem text="Killed" key="SegmentButtonKilled" width="21.3%" tooltip="Killed"/>
+																			<SegmentedButtonItem text="Amputation" key="SegmentButtonAmputation" width="33.3%" tooltip="Amputation"/>
+																			<SegmentedButtonItem text="Unconsciousness" key="SegmentButtonUnconsciousness" width="45.3%" tooltip="Unconsciousness"/>
+																		</items>
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</SegmentedButton>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>38.4}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/38.4}" required="false" enabled="true" placeholder="{i18n>38.4placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>39}">
+																<f:fields>
+																	<SegmentedButton width="100%">
+																		<items>
+																			<SegmentedButtonItem text="Yes" key="traficAccidentSegmentButtonYes" width="50%"/>
+																			<SegmentedButtonItem text="No" key="traficAccidentSegmentButtonNo" width="50%"/>
+																		</items>
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</SegmentedButton>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>41}">
+																<f:fields>
+																	<SegmentedButton width="100%">
+																		<items>
+																			<SegmentedButtonItem text="Yes" key="satisfiedSegmentButtonYes" width="50%"/>
+																			<SegmentedButtonItem text="No" key="satisfiedSegmentButtonNo" width="50%"/>
+																		</items>
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</SegmentedButton>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>41.1}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/41.1}" required="false" enabled="true" placeholder="{i18n>41.1placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+										</content>
+									</Panel>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<!--Page 2 Start-->
+					<!--FURTHER PARTICULARS OF EMPLOYEE Panel start-->
+					<uxap:ObjectPageSection id="FurtherParticularsOfEmployeeOPS" title="Further Particulars of Employee" importance="Medium"
+						titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="FurtherParticularsOfEmployeeOPSSS" title=" ">
+								<uxap:blocks>
+									<Panel expandable="false" expanded="false" width="auto" class="sapUiResponsiveMargin">
+										<content>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="1" labelSpanM="1" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement>
+																<f:fields>
+																	<Table id="idProductsTable" inset="false" items="{path: '/EarningsOfEmployee'}">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																		<columns>
+																			<Column demandPopin="true" hAlign="Center">
+																				<Text text="{i18n>42}"/>
+																				<layoutData>
+																					<l:GridData span="L6 M6 S12"/>
+																				</layoutData>
+																			</Column>
+																			<Column demandPopin="true" hAlign="Center">
+																				<Text text="{i18n>42.1}"/>
+																			</Column>
+																			<Column demandPopin="true" hAlign="Center">
+																				<Text text="{i18n>42.2}"/>
+																			</Column>
+																		</columns>
+																		<items>
+																			<ColumnListItem>
+																				<cells>
+																					<FlexBox alignItems="Center" justifyContent="Center">
+																						<items>
+																							<Text text="{Earnings}">
+																								<layoutData>
+																									<l:GridData span="L3 M3 S12"/>
+																								</layoutData>
+																							</Text>
+																						</items>
+																					</FlexBox>
+																					<FlexBox alignItems="Center" justifyContent="Center">
+																						<items>
+																							<Input value="{R_Week}" required="false" enabled="true">
+																								<layoutData>
+																									<l:GridData span="L3 M3 S12"/>
+																								</layoutData>
+																							</Input>
+																						</items>
+																					</FlexBox>
+																					<FlexBox alignItems="Center" justifyContent="Center">
+																						<items>
+																							<Input value="{R_Month}" required="false" enabled="true">
+																								<layoutData>
+																									<l:GridData span="L4 M4 S12"/>
+																								</layoutData>
+																							</Input>
+																						</items>
+																					</FlexBox>
+																				</cells>
+																			</ColumnListItem>
+																		</items>
+																	</Table>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement>
+																<f:fields>
+																	<Text text=" ">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Text>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+											<Text text="{i18n>43}">
+												<layoutData>
+													<l:GridData span="L12 M12 S12"/>
+												</layoutData>
+											</Text>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="12" labelSpanM="12" emptySpanL="4" emptySpanM="4" columnsL="3" columnsM="3"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>44}">
+																<f:fields>
+																	<SegmentedButton width="100%">
+																		<items>
+																			<SegmentedButtonItem text="Yes" key="furtherCompensationSegmentButtonYes" width="50%"/>
+																			<SegmentedButtonItem text="No" key="furtherCompensationSegmentButtonNo" width="50%"/>
+																		</items>
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</SegmentedButton>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>45}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/45}" required="false" enabled="true"
+																		placeholder="{employerReportAccidentModel>/45placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>46}">
+																<f:fields>
+																	<DateRangeSelection id="PaymentsMadePeriodDRS" change="handleChange">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</DateRangeSelection>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>53}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/stateNameAndAddressOfDependant}" required="false" enabled="true"
+																		placeholder="Address of dependant...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>48}">
+																<f:fields>
+																	<DateTimePicker id="ceasedWorkDateTimePicker" valueFormat="yyyy-MM-dd-HH-mm-ss" displayFormat="long" change="handleChange"
+																		placeholder="Enter date and time">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</DateTimePicker>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>50}">
+																<f:fields>
+																	<SegmentedButton width="100%">
+																		<items>
+																			<SegmentedButtonItem text="Yes" key="ShiftCompleteSegmentButtonYes" width="50%"/>
+																			<SegmentedButtonItem text="No" key="ShiftCompleteSegmentButtonNo" width="50%"/>
+																		</items>
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</SegmentedButton>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>47}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/47}" required="false" enabled="true" placeholder="{i18n>47placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement label="{i18n>51}">
+																<f:fields>
+																	<DateTimePicker id="WorkResumedDateTimePicker" valueFormat="yyyy-MM-dd-HH-mm-ss" displayFormat="long" change="handleChange"
+																		placeholder="{i18n>enterDateTime}">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</DateTimePicker>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+											<Text text="{i18n>note2}" class="redNotes">
+												<layoutData>
+													<l:GridData span="L12 M12 S12"/>
+												</layoutData>
+											</Text>
+										</content>
+									</Panel>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<!--Further Particulars Panel start-->
+					<uxap:ObjectPageSection id="FurtherParticularsOPS" title="Further Particulars" importance="Medium" titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="FurtherParticularsOPSSS" title=" ">
+								<uxap:blocks>
+									<Panel expandable="false" expanded="false" width="auto" class="sapUiResponsiveMargin">
+										<content>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="12" labelSpanM="12" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>54}">
+																<f:fields>
+																	<TextArea placeholder="{i18n>54placeholder}..." growing="true" width="100%">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</TextArea>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+											<Text text="" class="sapUiMediumMarginBegin">
+												<layoutData>
+													<l:GridData span="L12 M12 S12"/>
+												</layoutData>
+											</Text>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="12" labelSpanM="12" emptySpanL="4" emptySpanM="4" columnsL="3" columnsM="3"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>55}">
+																<f:fields>
+																	<SegmentedButton width="100%">
+																		<items>
+																			<SegmentedButtonItem text="Yes" key="FirstAidGIvenSegmentButtonYes" width="50%"/>
+																			<SegmentedButtonItem text="No" key="FirstAidGIvenSegmentButtonNo" width="50%"/>
+																		</items>
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</SegmentedButton>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>56}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/56}" required="false" enabled="true" placeholder="{i18n>56placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>57}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/57}" required="false" enabled="true" placeholder="{i18n>57placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+											<Text text="{i18n>58}" class="blackHeadings" textDirection="LTR">
+												<layoutData>
+													<l:GridData span="L12 M12 S12"/>
+												</layoutData>
+											</Text>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="12" labelSpanM="12" emptySpanL="4" emptySpanM="4" columnsL="3" columnsM="3"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>58.3}">
+																<f:fields>
+																	<SegmentedButton width="100%">
+																		<items>
+																			<SegmentedButtonItem text="Yes" key="ActionWhileDrugsUnderInfluenceSegmentButtonYes" width="50%"/>
+																			<SegmentedButtonItem text="No" key="ActionWhileDrugsUnderInfluenceSegmentButtonNo" width="50%"/>
+																		</items>
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</SegmentedButton>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>58.1}">
+																<f:fields>
+																	<SegmentedButton width="100%">
+																		<items>
+																			<SegmentedButtonItem text="Yes" key="nonComplianceWithDirectionsSegmentButtonYes" width="50%"/>
+																			<SegmentedButtonItem text="No" key="nonComplianceWithDirectionsSegmentButtonNo" width="50%"/>
+																		</items>
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</SegmentedButton>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>58.2}">
+																<f:fields>
+																	<SegmentedButton width="100%">
+																		<items>
+																			<SegmentedButtonItem text="Yes" key="recklessDisregardSegmentButtonYes" width="50%"/>
+																			<SegmentedButtonItem text="No" key="recklessDisregardSegmentButtonNo" width="50%"/>
+																		</items>
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</SegmentedButton>
+																</f:fields>
+															</f:FormElement>
+															<f:FormElement>
+																<f:fields>
+																	<Text text=" ">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Text>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+											<Text text="{i18n>note3}" class="redNoteNB">
+												<layoutData>
+													<l:GridData span="L12 M12 S12"/>
+												</layoutData>
+											</Text>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="12" labelSpanM="12" emptySpanL="4" emptySpanM="4" columnsL="3" columnsM="3"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>60}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/60}" required="false" enabled="true" placeholder="{i18n>60placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>62}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/62}" required="false" enabled="true" placeholder="{i18n>62placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>61}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/61}" required="false" enabled="true" placeholder="{i18n>61placeholder}...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+											<Text text="{i18n>59}" class="blackHeadings">
+												<layoutData>
+													<l:GridData span="L12 M12 S12"/>
+												</layoutData>
+											</Text>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="12" labelSpanM="12" emptySpanL="4" emptySpanM="4" columnsL="2" columnsM="2"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>59.1}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/59.1}" required="false" enabled="true" placeholder="Name and address...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>59.2}">
+																<f:fields>
+																	<Input value="{employerReportAccidentModel>/59.2}" required="false" enabled="true" placeholder="Name and address...">
+																		<layoutData>
+																			<l:GridData span="L12 M12 S12"/>
+																		</layoutData>
+																	</Input>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+										</content>
+									</Panel>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<!--rest of this page-->
+					<uxap:ObjectPageSection id="AdditionalDetailsOPS" title="{i18n>63}" titleUppercase="false">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="AdditionalDetailsOPSSS" title=" ">
+								<uxap:blocks>
+									<Panel expandable="false" expanded="false" width="auto" class="sapUiResponsiveMargin">
+										<content>
+											<TextArea placeholder="{i18n>63placeholder}..." growing="true" width="100%"/>
+										</content>
+									</Panel>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+					<uxap:ObjectPageSection id="DeclarationOPS" title="{i18n>declaration}">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection id="DeclarationOPSSS" title=" ">
+								<uxap:blocks>
+									<Panel expandable="false" expanded="false" width="auto" class="sapUiResponsiveMargin">
+										<content>
+											<f:Form editable="true">
+												<f:layout>
+													<f:ResponsiveGridLayout labelSpanL="6" labelSpanM="6" emptySpanL="4" emptySpanM="4" columnsL="3" columnsM="3"/>
+												</f:layout>
+												<f:formContainers>
+													<f:FormContainer>
+														<f:formElements>
+															<f:FormElement label="{i18n>declarationNote}">
+																<f:fields>
+																	<DatePicker change="handleDateChange" placeholder="Select Date...">
+																		<layoutData>
+																			<l:GridData span="L6 M6 S12"/>
+																		</layoutData>
+																	</DatePicker>
+																</f:fields>
+															</f:FormElement>
+														</f:formElements>
+													</f:FormContainer>
+												</f:formContainers>
+											</f:Form>
+										</content>
+									</Panel>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+				</uxap:sections>
+			</uxap:ObjectPageLayout>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

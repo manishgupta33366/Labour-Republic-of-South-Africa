@@ -1,0 +1,125 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "com.employerreportaccident",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		},
+		"dataSources": {
+			"masterDataSource": {
+				"uri": "/destination/services/",
+				"type": "JSON"
+			},
+			"usersSource": {
+				"uri": "/destination/services/",
+				"type": "JSON"
+			}
+		}
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+
+		]
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "com.employerreportaccident.view.App",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.employerreportaccident.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "masterDataSource"
+			},
+			"users": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "usersSource"
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.employerreportaccident.view",
+				"controlId": "rootContainer",
+				"controlAggregation":"pages",
+				"bypassed": {
+					"target": [
+						"notFound"
+					]
+				}
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "EmployerReportAccident",
+					"target": [
+						"EmployerReportAccident"
+					]
+				}
+			],
+			"targets": {
+				"EmployerReportAccident": {
+					"viewName": "EmployerReportAccident",
+					"viewLevel": 0
+				},
+				"notFound": {
+					"viewName": "NotFound"
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		}
+	}
+}

@@ -1,0 +1,84 @@
+{
+	"EarningsOfEmployee": [
+		{
+			"Earnings": "Gross cash earnings: (Including average payments for overtime and/or \n R/Week R/Month commission of a constant character):"
+		},
+		{
+			"Earnings": "Allowances of a recurrent nature:"
+		},
+		{
+			"Earnings": "Bonuses (i.e. 13th cheque):"
+		},
+		{
+			"Earnings": "Other allowances (specify nature):"
+		},
+		{
+			"Earnings": "Cash value of: \n Free food:"
+		},
+		{
+			"Earnings": "Free quarters"
+		},
+		{
+			"Earnings": "Other payment in kind (specify nature)"
+		}
+],
+	
+	"38A": [
+		{
+			"Text": "Defective plant"
+		},
+		{
+			"Text": "Defective machine"
+		},
+		{
+			"Text": "Unfavourable conditions of work"
+		},
+		{
+			"Text": "Fault of employer"
+		},
+		{
+			"Text": "Fault of injured employee"
+		},
+		{
+			"Text": "Fault of supervisor"
+		}
+		],
+			"38B": [
+		{
+			"Text": "Railway"
+		},
+		{
+			"Text": "Building work"
+		},
+		{
+			"Text": "Electricity"
+		},
+		{
+			"Text": "Chemicals"
+		},
+		{
+			"Text": "Poisoning"
+		},
+		{
+			"Text": "Burns"
+		},
+		{
+			"Text": "Explosions"
+		},
+		{
+			"Text": "Rotating machine"
+		},
+		{
+			"Text": "Press/Rollers"
+		},
+		{
+			"Text": "Woodworking machine"
+		},
+		{
+			"Text": "Lifting machine"
+		},
+		{
+			"Text": "Hand tools"
+		}
+		]
+}
