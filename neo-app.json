@@ -1,0 +1,14 @@
+{
+  "welcomeFile": "index.html",
+  "routes": [
+ {
+		"path": "/destination/services/",
+		"target": {
+			"type": "destination",
+			"name": "JavaApis"
+		},
+		"description": "Java Rest Services"
+	}
+ 
+  ]
+}

@@ -1,84 +1,95 @@
 {
-	"EarningsOfEmployee": [
-		{
-			"Earnings": "Gross cash earnings: (Including average payments for overtime and/or \n R/Week R/Month commission of a constant character):"
-		},
-		{
-			"Earnings": "Allowances of a recurrent nature:"
-		},
-		{
-			"Earnings": "Bonuses (i.e. 13th cheque):"
-		},
-		{
-			"Earnings": "Other allowances (specify nature):"
-		},
-		{
-			"Earnings": "Cash value of: \n Free food:"
-		},
-		{
-			"Earnings": "Free quarters"
-		},
-		{
-			"Earnings": "Other payment in kind (specify nature)"
-		}
-],
-	
-	"38A": [
-		{
-			"Text": "Defective plant"
-		},
-		{
-			"Text": "Defective machine"
-		},
-		{
-			"Text": "Unfavourable conditions of work"
-		},
-		{
-			"Text": "Fault of employer"
-		},
-		{
-			"Text": "Fault of injured employee"
-		},
-		{
-			"Text": "Fault of supervisor"
-		}
-		],
-			"38B": [
-		{
-			"Text": "Railway"
-		},
-		{
-			"Text": "Building work"
-		},
-		{
-			"Text": "Electricity"
-		},
-		{
-			"Text": "Chemicals"
-		},
-		{
-			"Text": "Poisoning"
-		},
-		{
-			"Text": "Burns"
-		},
-		{
-			"Text": "Explosions"
-		},
-		{
-			"Text": "Rotating machine"
-		},
-		{
-			"Text": "Press/Rollers"
-		},
-		{
-			"Text": "Woodworking machine"
-		},
-		{
-			"Text": "Lifting machine"
-		},
-		{
-			"Text": "Hand tools"
-		}
-		]
+	"EarningsOfEmployee": [{
+		"ID": "42.1",
+		"Earnings": "Gross cash earnings: (Including average payments for overtime and/or \n R/Week R/Month commission of a constant character):",
+		"R_Week_ID":"42.1.1",
+		"R_Month_ID":"42.2.1"
+	}, {
+		"ID": "42.2",
+		"Earnings": "Allowances of a recurrent nature:",
+		"R_Week_ID":"42.1.2",
+		"R_Month_ID":"42.2.2"
+	}, {
+		"ID": "42.3",
+		"Earnings": "Bonuses (i.e. 13th cheque):",
+		"R_Week_ID":"42.1.3",
+		"R_Month_ID":"42.2.3"
+	}, {
+		"ID": "42.4",
+		"Earnings": "Other allowances (specify nature):",
+		"R_Week_ID":"42.1.4",
+		"R_Month_ID":"42.2.4"
+	}, {
+		"ID": "42.5",
+		"Earnings": "Cash value of: \n Free food:",
+		"R_Week_ID":"42.1.5",
+		"R_Month_ID":"42.2.5"
+	}, {
+		"ID": "42.6",
+		"Earnings": "Free quarters",
+		"R_Week_ID":"42.1.6",
+		"R_Month_ID":"42.2.6"
+	}, {
+		"ID": "42.7",
+		"Earnings": "Other payment in kind (specify nature)",
+		"R_Week_ID":"42.1.7",
+		"R_Month_ID":"42.2.7"
+	}],
+
+	"38A": [{
+		"ID": "38.1.1",
+		"Text": "Defective plant"
+	}, {
+		"ID": "38.1.2",
+		"Text": "Defective machine"
+	}, {
+		"ID": "38.1.3",
+		"Text": "Unfavourable conditions of work"
+	}, {
+		"ID": "38.1.4",
+		"Text": "Fault of employer"
+	}, {
+		"ID": "38.1.5",
+		"Text": "Fault of injured employee"
+	}, {
+		"ID": "38.1.6",
+		"Text": "Fault of supervisor"
+	}],
+	"38B": [{
+		"ID": "38.2.1",
+		"Text": "Railway"
+	}, {
+		"ID": "38.2.2",
+		"Text": "Building work"
+	}, {
+		"ID": "38.2.3",
+		"Text": "Electricity"
+	}, {
+		"ID": "38.2.4",
+		"Text": "Chemicals"
+	}, {
+		"ID": "38.2.5",
+		"Text": "Poisoning"
+	}, {
+		"ID": "38.2.6",
+		"Text": "Burns"
+	}, {
+		"ID": "38.2.7",
+		"Text": "Explosions"
+	}, {
+		"ID": "38.2.8",
+		"Text": "Rotating machine"
+	}, {
+		"ID": "38.2.9",
+		"Text": "Press/Rollers"
+	}, {
+		"ID": "38.2.10",
+		"Text": "Woodworking machine"
+	}, {
+		"ID": "38.2.11",
+		"Text": "Lifting machine"
+	}, {
+		"ID": "38.2.12",
+		"Text": "Hand tools"
+	}]
 }
