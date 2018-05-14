@@ -12,7 +12,7 @@ sap.ui.define([
 			oTableModel.setDefaultBindingMode("TwoWay");
 			this.getView().setModel(oTableModel, "tablesData");
 		},
-		_defaultValues:{},
+		_defaultValues: {},
 		_backendCall: function(url, type, input, paramters) {
 			var self = this;
 			//var oBundle = this.getResourceBundle();
@@ -22,12 +22,15 @@ sap.ui.define([
 				type: type,
 				data: JSON.stringify(input),
 				success: function(data) {
-					self._defaultValues=data;
-					var defaultValuesModel = new sap.ui.model.json.JSONModel(JSON.parse(data));
-					defaultValuesModel.setDefaultBindingMode("TwoWay");
-					self.getView().setModel(defaultValuesModel, "employerReportAccidentModel");
-					self.getView().bindElement("employerReportAccidentModel>/");
-					console.log(JSON.parse(data));
+					if (type === "GET") {
+						self._defaultValues = data;
+						var defaultValuesModel = new sap.ui.model.json.JSONModel(JSON.parse(data));
+						defaultValuesModel.setDefaultBindingMode("TwoWay");
+						self.getView().setModel(defaultValuesModel, "employerReportAccidentModel");
+						self.getView().bindElement("employerReportAccidentModel>/");
+					} else if (type === "POST") {
+						//postSucess
+					}
 				}
 			});
 		},
@@ -70,25 +73,52 @@ sap.ui.define([
 				this._updateModel(58.2, oEvent.getParameters().item.getProperty("text"));
 			}
 		},
-		handleChangeDateTimePicker: function(oEvent){
+		handleChangeDateTimePicker: function(oEvent) {
 			if (oEvent.getSource().getId().indexOf("dateTimePickerAccident") !== -1) {
-				var dateTimeArray=oEvent.getParameter("newValue").split("-");
+				var dateTimeArray = oEvent.getParameter("newValue").split("-");
 				var date = new Date(dateTimeArray[0], dateTimeArray[1], dateTimeArray[2], dateTimeArray[3], dateTimeArray[4], dateTimeArray[5]).toISOString();
-				dateTimeArray=date.split("T");
+				dateTimeArray = date.split("T");
 				this._updateModel(29, dateTimeArray[0]);
 				this._updateModel(30, dateTimeArray[1]);
 			}
 
 		},
-		onTableInputBoxChange: function(oEvent){
-			this._updateModel(oEvent.getSource().getBindingContext("tablesData").getProperty().R_Month_ID,oEvent.getSource().getBindingContext("tablesData").getProperty().R_Month);
-			this._updateModel(oEvent.getSource().getBindingContext("tablesData").getProperty().R_Week_ID,oEvent.getSource().getBindingContext("tablesData").getProperty().R_Week);
+		onTableInputBoxChange: function(oEvent) {
+			this._updateModel(oEvent.getSource().getBindingContext("tablesData").getProperty().R_Month_ID, oEvent.getSource().getBindingContext(
+				"tablesData").getProperty().R_Month);
+			this._updateModel(oEvent.getSource().getBindingContext("tablesData").getProperty().R_Week_ID, oEvent.getSource().getBindingContext(
+				"tablesData").getProperty().R_Week);
 		},
-		onCheckBoxSelected: function(oEvent){
-			this._updateModel(oEvent.getSource().getBindingContext("tablesData").getProperty().ID,oEvent.getParameter("selected"));
+		onCheckBoxSelected: function(oEvent) {
+			this._updateModel(oEvent.getSource().getBindingContext("tablesData").getProperty().ID, oEvent.getParameter("selected"));
 		},
 		onPressSubmit: function() {
-
+			var _that = this;
+			var dialog = new sap.m.Dialog({
+				title: 'Confirm',
+				type: 'Message',
+				content: new sap.m.Text({
+					text: 'Are you sure you want to Submit this form?'
+				}),
+				beginButton: new sap.m.Button({
+					text: 'Yes',
+					press: function() {
+						var dataTosSend = _that.getView().getModel("employerReportAccidentModel").getData();
+						_that._backendCall("/destination/services/PDFBuilder/values/Doc1", "POST", dataTosSend, "");
+						dialog.close();
+					}
+				}),
+				endButton: new sap.m.Button({
+					text: 'No',
+					press: function() {
+						dialog.close();
+					}
+				}),
+				afterClose: function() {
+					dialog.destroy();
+				}
+			});
+			dialog.open();
 		},
 		onPressReset: function() {
 			var _that = this;
