@@ -105,7 +105,6 @@ sap.ui.define([
 						_that.getView().getModel("tablesData").loadData(tableData);
 						_that.getView().getModel("employerReportAccidentModel").setData(JSON.parse(_that._defaultValues));
 						//_that.getView().bindElement("employerReportAccidentModel>/");
-						_that.getView().byId("ObjectPageLayoutOne").rerender();
 						sap.m.MessageToast.show('Form reset sucessfull!');
 						dialog.close();
 					}
